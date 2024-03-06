@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffff;
+}
+
+.container {
+    border: 9px solid gainsboro;
+    border-radius: 4px;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 50px;
+    border: 0px transparent;
+    background-color: #FB7FFF57;
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    bottom: 78%;
+}
+
+.like-dislike {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 11%;
+    left: 30%;
+}
+
+.hart,
+.fout {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f15cf657;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hart.like:hover,
+.fout.dislike:hover {
+    transform: scale(1.2);
+}
+
+#dog-image {
+    position: absolute;
+    bottom: 45px;
+    left: -127px;
+    width: 400px;
+    height: 330px;
+}
+
+.dog-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.wrong-img,
+.heart-img {
+    position: absolute;
+    bottom: 100px;
+    display: none;
+    transition: transform 0.5s;
+}
+
+.wrong-img {
+    position: absolute;
+    right: -200px;
+}
+
+.heart-img {
+    position: absolute;
+    right: -180px;
+    bottom: 120px;
+    width: 200px;
+}
+
+.wrong-img.active,
+.heart-img.active {
+    display: block;
+    transform: scale(1.5);
+}
+
+.button-circle {
+    border: 2px solid;
+    border-radius: 50%;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.like-circle.active,
+.dislike-circle.active {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    z-index: -1;
+}
